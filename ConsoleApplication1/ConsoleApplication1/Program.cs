@@ -10,7 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Magenta
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.BackgroundColor = ConsoleColor.White;
             Console.WriteLine(" ╔════════╗ ");
             Console.WriteLine(" ║                ║ ");
@@ -18,19 +18,29 @@ namespace ConsoleApplication1
             Console.WriteLine(" ║                ║ ");
             Console.WriteLine(" ╚════════╝ ");
 
-            // 宣告匯率變數與數值
-            double rate = 0.02748;
+            //定義
+            Console.Write("身高(cm):");
+            string hight = Console.ReadLine();
+            Console.Write("體重(kg):");
+            string weight = Console.ReadLine();
 
-            // 顯示匯率
-            Console.WriteLine("目前韓幣匯率:" + rate);
+            // 計算
+            double BMI = double.Parse(weight) / (double.Parse(hight) * double.Parse(hight) * 1000);
+            Console.WriteLine("BMI:" + BMI.ToString());
 
-            // 接收數值
-            Console.Write("請輸入匯率金額:");
-            string input = Console.ReadLine();
-
-            //計算
-            double total = double.Parse(input) * rate;
-            Console.WriteLine(" 換算成台幣是:  " + total );
+            //答覆
+            if(BMI < 18.5)
+            {
+                Console.WriteLine("偏輕");
+            }
+            if(BMI>=18.5 && BMI<24)
+            {
+                Console.WriteLine("適中");
+            }
+            if(BMI > 24)
+            {
+                Console.WriteLine("過重");
+            }
             Console.ReadLine();
         }
     }
