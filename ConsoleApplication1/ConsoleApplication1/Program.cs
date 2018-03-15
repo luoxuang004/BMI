@@ -19,13 +19,13 @@ namespace ConsoleApplication1
             Console.WriteLine(" ╚════════╝ ");
 
             //定義
-            Console.Write("身高(cm):");
+            Console.Write("身高(m):");
             string hight = Console.ReadLine();
             Console.Write("體重(kg):");
             string weight = Console.ReadLine();
 
             // 計算
-            double BMI = double.Parse(weight) / (double.Parse(hight) * double.Parse(hight) * 1000);
+            double BMI = double.Parse(weight) / (double.Parse(hight) * double.Parse(hight) );
             Console.WriteLine("BMI:" + BMI.ToString());
 
             //答覆
