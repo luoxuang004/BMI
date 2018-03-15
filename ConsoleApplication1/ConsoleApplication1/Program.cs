@@ -41,6 +41,14 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("過重");
             }
+            if(BMI < 16.5)
+            {
+                Console.WriteLine("免疫");
+            }
+            if(BMI > 31.5)
+            {
+                Console.WriteLine("免疫");
+            }
             Console.ReadLine();
         }
     }
